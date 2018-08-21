@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL maintainer="Infrawall."
+LABEL maintainer="jeanfprado"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		apache2 \

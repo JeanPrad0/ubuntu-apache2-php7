@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL maintainer="mobingi,Inc."
+LABEL maintainer="jeanfprado"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		apache2 \
@@ -28,10 +28,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		php7.1-pspell \
 		php7.1-xml \
 		php7.1-xmlrpc \
+		php7.1-zip\
 		php-apcu \
 		php-memcached \
 		php-pear \
 		php-redis \
+		composer \
 	&& apt-get clean \
 	&& rm -fr /var/lib/apt/lists/*
 
