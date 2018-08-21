@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL maintainer="mobingi,Inc."
+LABEL maintainer="jeanfprado."
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		apache2 \
@@ -34,8 +34,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		php-pear \
 		php-redis \
 		composer \
+		mysql-client \	
 	&& apt-get clean \
-	&& rm -fr /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt
 
 RUN a2enmod rewrite
 COPY conf/000-default.conf /etc/apache2/sites-available/000-default.conf

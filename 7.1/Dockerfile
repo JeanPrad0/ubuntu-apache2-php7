@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		php-pear \
 		php-redis \
 		composer \
+		mysql-client \	
 	&& apt-get clean \
 	&& rm -fr /var/lib/apt/lists/*
 
